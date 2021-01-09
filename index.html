@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V18</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/estilo.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+
+
+<!--===============================================================================================-->
+
+
+
+ <script>
+    function sololetras(e) {
+        key=e.keyCode || e.which;
+ 
+        teclado=String.fromCharCode(key).toLowerCase();
+ 
+        letras="qwertyuiopasdfghjklñzxcvbnm ";
+ 
+        especiales="8-37-38-46-164";
+ 
+        teclado_especial=false;
+ 
+        for(var i in especiales){
+            if(key==especiales[i]){
+                teclado_especial=true;
+                break;
+            }
+        }
+ 
+        if(letras.indexOf(teclado)==-1 && !teclado_especial){
+            return false;
+        }
+    }
+    </script>
+
+
+
+<script type="text/javascript">
+// Solo permite ingresar numeros.
+function soloNumeros(e){
+	var key = window.Event ? e.which : e.keyCode
+	return (key >= 48 && key <= 57)
+}
+</script>
+
+
+
+</head>
+<body>
+	<header>
+		
+    <img src="https://i.imgur.com/dA3rYG9.jpg"  width="20%">
+
+
+	</header>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" style="background-color:#C8C3A7; ">
+					<span class="login100-form-title p-b-43">
+						Actualizar datos
+					</span>
+					
+
+<!--                       <label style="font-family: SEATBCN-Black">Nombre:</label>
+ -->				<div class="wrap-input100 validate-input" data-validate = "Es necesario">
+						<input class="input100" type="text" name="name" style="font-family:SEATBCN-Book" onkeypress="return sololetras(event)" onpaste="return false"/>
+						<span class="focus-input100"></span>
+						<span class="label-input100" style="font-family: SEATBCN-Black; font-size: 15px;">Nombres</span>
+					</div>
+
+					 <div class="wrap-input100 validate-input" data-validate = "Es necesario">
+						<input class="input100" type="text" name="documento" style="font-family:SEATBCN-Book" onkeypress="return soloNumeros(event)" onpaste="return false"/>
+						<span class="focus-input100"></span>
+						<span class="label-input100" style="font-family: SEATBCN-Black; font-size: 15px;">Documento de indentidad</span>
+					</div>
+                   
+					<div class="wrap-input100 validate-input" data-validate = "email es requerido: ex@abc.com">
+						<input class="input100" type="text" name="email" style="font-family:SEATBCN-Book">
+						<span class="focus-input100"></span>
+						<span class="label-input100" style="font-family: SEATBCN-Black;font-size: 15px;">Correo</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Es necesario">
+						<input class="input100" type="text" name="celular" style="font-family:SEATBCN-Book" onkeypress="return soloNumeros(event)" onpaste="return false"/>
+						<span class="focus-input100"></span>
+						<span class="label-input100" style="font-family: SEATBCN-Black;font-size: 15px;">Celular</span>
+					</div>
+					
+
+					
+
+					<div class="flex-sb-m w-full p-t-3 p-b-32">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="tyc" required="">
+							<label class="label-checkbox100" for="ckb1"><a href="https://www.seat.pe/politica-privacidad.html">Términos y condiciones</a>
+								
+							</label>
+						</div>
+					</div>
+			
+
+					<div class="container-login100-form-btn">
+						 
+						<button class="login100-form-btn" type="submit" value="Enviar">
+							
+                               Enviar
+						
+						</button>
+					</div>
+					
+
+				<!-- 	<div class="login100-form-social flex-c-m">
+						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+							<i class="fa fa-facebook-f" aria-hidden="true"></i>
+						</a>
+
+						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</div>
+ -->				</form>
+
+				<div class="login100-more" style="background-image: url('images/bg-01.jpg');">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+
+<!-- FOOTER START -->
+<div class="footer" style="background-color: #444340">
+  <div class="contain">
+  <div class="col">
+    <h1 style="color: #FFFFFF">Modelos</h1>
+    <ul>
+      <li><a href="https://www.seat.pe/modelos/ibiza.html">Ibiza</a></li>
+      <li><a href="https://www.seat.pe/modelos/leon.html">León<a/></li>
+      <li><a href="https://www.seat.pe/modelos/arona.html">Arona</a></li>
+      <li><a href="https://www.seat.pe/modelos/ateca.html">Ateca</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1 style="color: #FFFFFF">Quiero un Seat</h1>
+    <ul>
+      <li><a href="https://www.seat.pe/quiero-un-seat/pruebalo.html">Prueba un SEAT</a></li>
+      <li><a href="https://www.seat.pe/quiero-un-seat/cotizalo.html">Cotiza tu SEAT</a></li>
+      <li><a href="https://www.seat.pe/quiero-un-seat/fichas-tecnicas.html">Fichas técnicas</a></li>
+      <li><a href="https://www.seat.pe/quiero-un-seat/concesionarios-redirect.html">Concesionarios</a></li>
+      <li><a href="https://www.seat.pe/quiero-un-seat/seminuevos.html">SEAT Seminuevos</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1 style="color: #FFFFFF">Servicio SEAT</h1>
+    <ul>
+      <li><a href="https://www.seat.pe/posventa-redirect/servicio-redirect.html">Servicio</a></li>
+      <li><a href="https://www.seat.pe/posventa-redirect/repuestos-redirect.html">Repuestos</a></li>
+      <li><a href="https://www.seat.pe/posventa-redirect/accesorios-redirect.html">Accesorios</a></li>
+      <li><a href="https://www.seat.pe/posventa-redirect/garantia-redirect.html">Garantía</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1 style="color: #FFFFFF">Sobre SEAT</h1>
+    <ul>
+      <li><a href="https://www.seat.pe/sobre-seat/movilidad.html" >Soluciones de movilidad</a></li>
+      <li><a href="https://www.seat.pe/sobre-seat/creatividad-urbana.html">Creatividad urbana</a></li>
+      <li><a href="https://www.seat.pe/sobre-seat/avanzando-juntos.html">Avanzando juntos</a></li>
+      <li><a href="https://www.seat.pe/sobre-seat/historia.html">Historia</a></li>
+      <li><a href="https://www.seat.pe/sobre-seat/informe-anual.html">Informe anual</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1 style="color: #FFFFFF">Contacto</h1>
+    <ul>
+      <li><img src="https://i.imgur.com/1hn0l8V.png"  width="20" style="width: 20px;"><br><a href="https://g.page/seateuroshop?share"> Calle Los Negocios 386, Surquillo
+                                                    </a></li>
+      <li><img src="https://i.imgur.com/CZ8kMsi.png"  width="20" style="width: 20px;"><br><a href="info@seat.com.pe"> info@seat.com.pe
+                                                    </a></li>
+     
+    </ul>
+  </div>
+  <div class="col social">
+    <h1 style="color: #FFFFFF">Social</h1>
+    <ul>
+      <li><a href="https://www.facebook.com/seatpe"><img src="https://i.imgur.com/ARB7Sne.png" width="32" style="width: 32px;"></a></li>
+      <li><a href="https://www.instagram.com/seatpe/"><img src="https://i.imgur.com/wD4hFRS.png" width="32" style="width: 32px;"></a></li>
+      <li><a href="https://www.youtube.com/channel/UC79kMSv-iNSb488xtnMPIBg"><img src="https://i.imgur.com/A0pdRjt.png" width="32" style="width: 32px;"></a></li>
+    </ul>
+  </div>
+<div class="clearfix"></div>
+</div>
+
+<p class="footer-company-name" style="text-align: center;">©2021 SEAT Perú. Todos los derechos reservados.</p>
+</div>
+<!-- END OF FOOTER -->
+
+
+
+	</body>
+</html>
+ 
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
